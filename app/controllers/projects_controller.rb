@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :find_project
   before_filter :find_project, :only => [:show,
                                          :edit,
                                          :update,
@@ -52,6 +53,11 @@ class ProjectsController < ApplicationController
                       " for could not be found."
       redirect_to projects_path
     end
+    
+    def show
+      
+    end
+    
 
 end
 
